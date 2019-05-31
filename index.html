@@ -1,0 +1,60 @@
+<html><head><center><h2>
+README</h2></center>
+for the model associated with:
+<p/>
+
+ Rulkov NF, Timofeev I, Bazhenov M (2004) <br/>
+Oscillations in large-scale cortical networks: map-based model.<br/>
+J Comput Neurosci <b>17</b>:203-23 <br/><br/>
+
+</head><body>
+<b>
+This model is written in C++. </b> The following instructions work have worked
+under redhat linux 9 although
+the code should work with little or no modification on other platforms with ansi compilers.<p/>
+<h4>How to compile:</h4>
+Change to the directory in which you have unziped the archieve file, then type:
+<pre>
+g++ network2D.cpp -lm -O4 -ffast-math -o n.exe
+</pre>
+<h4> How to run:</h4>
+<pre>
+n.exe input2D.txt > tmp &
+</pre>
+C++ code for simulating 2 layer 2D network (256x256
+pyramidal cells - regular spiking
+type and 128x128 interneurons - fast spiking type) of map-based neurons.
+With some small modifications this code
+was used to generate Fig 9A (right plot) in our JCNS paper.
+Also there is a movie of spiral wave dynamics available (see pop-down
+window above model files in ModelDB.
+<p/>
+<h4>
+Making the movie with matlab:</h4>
+Matlab scripts which create images which are then used to create the movie:
+<pre>
+import2D('graf_cx0')
+movieMAP
+</pre>
+To assemble the images into the movie and then save the movie:
+<pre>
+for i=1:200; tmp=imread(['mov' num2str(i) '.png']); m(i)=im2frame(tmp); end;
+movie2avi(m,'spiral2D.avi');
+</pre>
+<h4>Additional note:</h4>
+The simulations with 256x256 require > 1GB RAM (otherwise there is a huge
+time penalty for virtual memory use).
+<br/><br/>
+
+<br/>
+Correspondence:
+<br/>
+Dr. Maxim Bazhenov, The Salk Institute,
+<br/>
+10010 North Torrey Pines Road, La Jolla, CA 92037.
+<br/>
+E-mail:
+<A href="mailto:bazhenov@salk.edu?Subject=Novel model for study of large scale networks 2004">
+bazhenov@salk.edu
+</A>
+</body></html></A>

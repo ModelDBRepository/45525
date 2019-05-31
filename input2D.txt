@@ -1,0 +1,9 @@
+2000 0 0 
+0.0015 0.0007 0.0002 
+0.00
+
+
+(Max_Stimulation_Time) (Time_to_Start_2D_Recording) (Time_to_Start_1D_Recording)
+(PY_PY_coupling) (PY-IN_coupling) (IN_PY_coupling)
+(External_Input) 
+
